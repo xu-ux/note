@@ -8,12 +8,29 @@
 <!-- [![码云](https://img.shields.io/badge/Gitee-%E7%A0%81%E4%BA%91-yellow.svg)](https://gitee.com/xu-ux) -->
 [![Github](https://img.shields.io/badge/Github-Github-red.svg)](https://github.com/xu-ux)
 
+<!-- !> 相关内容，若有侵权，请联系删除！ -->
+
+
 
 ## 关于
 
-- Email:  xu_uxo@163.com
-- CSDN: https://blog.csdn.net/qq_35341203
-- 个人博客：https://xu-ux.github.io/
+一名低调的Java开发攻城狮:octocat:
+
+<!-- tabs:start -->
+
+#### **Email**
+
+Email:  xu_uxo@163.com
+
+#### **CSDN**
+
+CSDN: https://blog.csdn.net/qq_35341203
+
+#### **个人博客**
+
+个人博客：https://xu-ux.github.io/
+
+<!-- tabs:end -->
 
 
 ## 开源小项目
