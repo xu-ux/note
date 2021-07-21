@@ -14,6 +14,7 @@
 - Email:  xu_uxo@163.com
 - CSDN: https://blog.csdn.net/qq_35341203
 - 个人博客：https://xu-ux.github.io/
+- 云笔记：https://xu-ux.github.io/note/
 
 
 ## 开源小项目
