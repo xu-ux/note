@@ -28,8 +28,10 @@
                         'https://github.com/xu-ux/note/blob/main/docs/' +vm.route.file;
                     let editHtml = `[📝 EDIT DOCUMENT](` + url + `)\n`;
 
+                    let discussionsHtml = `[:thought_balloon:问答&社区](https://github.com/xu-ux/note/discussions)\n`
+
                     return (
-                        editHtml +
+                        editHtml + discussionsHtml +
                         html +
                         '\n----\n' +
                         'Last modified ' +
@@ -41,8 +43,9 @@
                     '<hr/>',
                     '<p class="tip">相关内容，若有侵权，请联系删除！</p>',
                     '<footer>',
-                    '<span><a href="https://github.com/xu-ux">xu-ux</a> &copy;2021.</span>',
+                    '<span><a href="https://github.com/xu-ux">Xu-ux</a> &copy;2021.</span>',
                     '<span>Powered by <a href="https://docsify.js.org/" target="_blank">Docsify</a>.</span>',
+                    '<span>问答&社区 <a href="https://github.com/xu-ux/note/discussions" target="_blank">Xu-ux\'s Discussions</a></span>',
                     '</footer>'
                 ].join('');
 
@@ -69,6 +72,7 @@
         maxLevel:4,
         alias: {
             '/catalog/_sidebar.md': '_sidebar.md',
+            '/catalog/_navbar.md':'_navbar.md',
         },
         // 搜索配置
         search: {
@@ -140,8 +144,8 @@
         repo: 'note',
         owner: 'xu-ux',
         admin: ['xu-ux'],
-        title: 'comment-'+location.pathname,
-        id: md5(location.pathname),
+        title: 'comment-'+location.hash,
+        id: md5(location.pathname+location.hash),
         // facebook-like distraction free mode
         distractionFreeMode: false
     })
