@@ -15,6 +15,7 @@
 - CSDN: https://blog.csdn.net/qq_35341203
 - 个人博客：https://xu-ux.github.io/
 - 云笔记：https://xu-ux.github.io/note/
+- 社区：https://github.com/xu-ux/note/discussions
 
 ## 开源小项目
 
