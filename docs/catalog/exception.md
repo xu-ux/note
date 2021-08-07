@@ -4,8 +4,6 @@
 
 ## 1.框架异常
 
-### 1.1 ORM层
-
 ### 1.2 Spring
 
 ### 1.3 SpringBoot
@@ -25,3 +23,8 @@
 
 ## 5.中间件异常
 - [RabbitMQ-An unexpected connection driver error occured](/md/Exception/middleware/rabbitMQ/AnUnexpectedConnectionDriverErrorOccured.md)
+
+## 6.ORM层异常
+- [TkMybatis-PageHelper-查询碰到IndexOutOfBoundsException](/md/Exception/orm/mybatis/TkMybatis-PageHelper-查询碰到IndexOutOfBoundsException.md)
+
+## 7.线上异常
