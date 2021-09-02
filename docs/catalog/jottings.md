@@ -1,4 +1,4 @@
-# 小记随笔
+# 📝 小记随笔
 
 ## 1.字典
 - [EmojiSheet](/md/小记随笔/字典/EmojiSheet.md "emoji-cheat-sheet")
