@@ -13,7 +13,7 @@
  - [🧰 工具](catalog/tool.md)
  - [🔧 运维](catalog/ops.md)
  - [💣 异常](catalog/exception.md)
- - [🤞 第三方对接](catalog/thirdParty.md)
+ - [📠 第三方对接](catalog/thirdParty.md)
  - [📦 大数据](catalog/bigData.md)
  - [🌲 架构](catalog/framework.md)
  - [☣️环境搭建](catalog/env.md)
