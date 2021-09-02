@@ -1,0 +1,68 @@
+/*全局配置*/
+a {
+    text-decoration: none;
+}
+
+/*封面背景start*/
+.cover.show {
+    background: linear-gradient(to left bottom, hsl(222, 100%, 85%) 0%,hsl(153, 100%, 85%) 100%) !important;
+    animation: hue 15s infinite !important;
+}
+/*定义动画*/
+@keyframes hue {
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(360deg); }
+}
+/*封面背景end*/
+
+/*弹窗的设置*/
+.sweet-alert .sa-button-container .sa-confirm-button-container button{
+    display: inline-block !important;
+    background-color: #42b983 !important;
+    box-shadow: rgb(140 245 148 / 80%) 0px 0px 2px, rgb(0 0 0 / 5%) 0px 0px 0px 1px inset !important;
+}
+
+/*内容区*/
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*padding-top: 70px !important;*/
+}
+
+/*侧边栏*/
+/*左边距调整*/
+.sidebar ul {
+    margin: 0 0 0 25px !important;
+}
+/*侧边栏-去除*/
+.app-sub-sidebar li::before {
+    content: "" !important;
+}
+
+/*顶部分类*/
+.app-nav {
+    position: fixed !important;
+}
+
+/*底部*/
+/* 置顶插件 */
+.to-top {
+    display: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #3ec287;
+}
+
+/*md渲染*/
+.markdown-section blockquote {
+    border-left: 5px solid var(--theme-color, #42b983) !important;
+    background-color: #f2f9f2;
+    padding: 3px 3px 3px 20px;
+}
+.markdown-section h1:before {
+    content: "#";
+    margin-right: 10px;
+    color: #3ec287;
+}

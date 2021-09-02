@@ -10,5 +10,6 @@
 - 业务场景：后端、小程序、APP
 - 框架工具：Spring、Gin、UniApp、Flutter
 
+[Gitee](https://gitee.com/xuo-oux)
 [GitHub](https://github.com/xu-ux)
-[Get Started](#fire主页简介)
+[开始阅读](#🧙♂%ef%b8%8f主页简介)

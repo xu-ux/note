@@ -1,19 +1,28 @@
 <!-- 导航栏配置 _navbar.md -->
 
-* :rocket:导航
-  * [首页导航](home.md "首页导航")
+* :rocket:[主页](home.md "主页")
+  * [☕ Java](catalog/java.md)
+  * [⛰️Database](catalog/dataBase.md)
+  * [⚙️Middleware](catalog/middleware.md)
+  * [🎃 JavaScript](catalog/javascript.md)
+  * [🍚 Vue](catalog/vue.md)
+  * [📱 Flutter](catalog/flutter.md)
+  * [🌊 Golang](catalog/golang.md)
+  * [🕷️ Python](catalog/python.md)
 
 
-* :anchor:入门
-  * [快速开始](zh-cn/quickstart.md "快速开始")
-  * [多页文档](zh-cn/more-pages.md)
-  * [定制导航栏](zh-cn/custom-navbar.md)
-  * [封面](zh-cn/cover.md)
+* [技术](catalog/docker.md "docker")
+  * [🐧 Linux](catalog/linux.md)
+  * [🐳 Docker](catalog/docker.md)
+  * [🧰 工具](catalog/tool.md)
+  * [🔧 运维](catalog/ops.md)
+  * [💣 异常](catalog/exception.md)
+  * [📠 第三方对接](catalog/thirdParty.md)
+  * [📦 大数据](catalog/bigData.md)
+  * [🌲 架构](catalog/framework.md)
+  * [☣️环境搭建](catalog/env.md)
+  * [📚 编程思想](catalog/thinking.md)
 
 
-* :beers:配置
-  * [配置项](zh-cn/configuration.md)
-  * [主题](zh-cn/themes.md)
-  * [使用插件](zh-cn/plugins.md)
-  * [Markdown 配置](zh-cn/markdown.md)
-  * [代码高亮](zh-cn/language-highlight.md)
+* [随笔](catalog/jottings.md "随笔")
+  * [📝 小记随笔](catalog/jottings.md)

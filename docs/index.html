@@ -4,22 +4,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="description" content="xu-ux的个人云笔记">
     <link rel="icon" href="favicon.ico">
     <!--vue主题-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">
     <!--  <link rel="stylesheet" href="css/prism.css">-->
+    <!-- alert -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+    <!-- latex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+    <!-- custom -->
+    <link rel="stylesheet" type="text/css" href="static/custom-light.css"/>
 
 </head>
 <body>
-<div id="app">加载中</div>
-<script>
-    /*      if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('js/sw.js');
-          }*/
-</script>
+<div id="app" >🏃‍🏃‍🏃‍💨加载中</div>
+<a class="to-top">Top</a>
+
 <script>
     window.$docsify = {
         el: '#app',
+
+        name: 'xu-ux\'s note',
+        // 配置仓库地址
+        // repo: 'https://github.com/xu-ux/note/',
+        // 入口文件改为 /home.md
+        homepage: 'home.md',
+        // 封面配置
+        coverpage: true,
+        // 导航栏配置
+        loadNavbar: true,
+        // 侧边栏自定义
+        loadSidebar: true,
+        topMargin: 140,
+        // 显示层级
+        subMaxLevel: 2,
+        maxLevel:4,
+        alias: {
+            '/catalog/_sidebar.md': '_sidebar.md',
+            '/catalog/_navbar.md':'_navbar.md',
+        },
+        // 搜索配置
+        search: {
+            paths: 'auto',
+            placeholder: '🔍 搜索',
+            maxAge: 86400000,
+            noData: '😒 找不到结果!',
+            depth: 6,
+            pathNamespaces: ['/', '/md/','/catalog/'],
+            hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+            namespace: 'website-key-xu-ux-note'
+        },
+        // 统计
+        count: {
+            countable: true,
+            fontsize: '0.9em',
+            color: 'rgb(90,90,90)',
+            language: 'chinese'
+        },
+        // 分栏
+        tabs: {
+            persist    : true,      // default
+            sync       : true,      // default
+            theme      : 'classic', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+        },
+        // 复制code插件
+        copyCode: {
+            buttonText: 'Copy',
+            errorText: 'Error',
+            successText: 'OK!'
+        },
+
+        'flexible-alerts': {
+            style: 'flat'
+        },
+
+        plantuml: {
+            //skin: 'default',
+            skin: 'classic',
+        },
+
         plugins: [
             function(hook, vm) {
 
@@ -31,11 +97,11 @@
                     let discussionsHtml = `[:thought_balloon:问答&社区](https://github.com/xu-ux/note/discussions)\n`
 
                     return (
-                        editHtml + discussionsHtml +
+                        //editHtml + discussionsHtml +
                         html +
                         '\n----\n' +
-                        'Last modified ' +
-                        editHtml
+                        //'Last modified ' +
+                        editHtml  + discussionsHtml
                     );
                 });
 
@@ -55,51 +121,7 @@
 
 
             }
-        ],
-        name: 'xu-ux\'s note',
-        // 配置仓库地址
-        repo: 'https://github.com/xu-ux/note/',
-        // 入口文件改为 /home.md
-        homepage: 'home.md',
-        // 封面配置
-        coverpage: true,
-        // 导航栏配置
-        loadNavbar: true,
-        // 侧边栏自定义
-        loadSidebar: true,
-        // 显示层级
-        subMaxLevel: 2,
-        maxLevel:4,
-        alias: {
-            '/catalog/_sidebar.md': '_sidebar.md',
-            '/catalog/_navbar.md':'_navbar.md',
-        },
-        // 搜索配置
-        search: {
-            paths: 'auto',
-            placeholder: '搜索文档',
-            maxAge: 86400000,
-            noData: '找不到结果!',
-            depth: 6,
-            pathNamespaces: ['/', '/md/','/catalog/'],
-            hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-            namespace: 'website-key-xu-ux-note'
-        },
-
-        count: {
-            countable: true,
-            fontsize: '0.9em',
-            color: 'rgb(90,90,90)',
-            language: 'chinese'
-        },
-
-        tabs: {
-            persist    : true,      // default
-            sync       : true,      // default
-            theme      : 'classic', // default
-            tabComments: true,      // default
-            tabHeadings: true       // default
-        }
+        ]
     }
 </script>
 <!--核心-->
@@ -117,6 +139,10 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
 <!-- docsify-tabs (latest v1.x.x) -->
 <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+<!-- Markdown 引用样式美化 https://github.com/fzankl/docsify-plugin-flexible-alerts -->
+<script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+<!--docsify-katex-->
+<script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 <!--代码语法高亮支持-->
 <!--<script th:src="@{/js/prism.js}></script>-->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-bash.min.js"></script>
@@ -133,22 +159,41 @@
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-json.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-python.js"></script>
 <!--GitTalk评论支持-->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+<script type="text/javascript" src="static/custom.js"></script>
+<!--uml时序图支持 https://github.com/imyelo/docsify-plantuml -->
+<script src="https://unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+<!-- 复制弹窗-->
+<script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script>
-    const gitalk = new Gitalk({
-        clientID: '78e34bb02c5fb25c725a',
-        clientSecret: '43de20bafaed0534c3a78435c1f5460f3848de21',
-        repo: 'note',
-        owner: 'xu-ux',
-        admin: ['xu-ux'],
-        title: 'comment-'+location.pathname,
-        id: md5(location.pathname),
-        // facebook-like distraction free mode
-        distractionFreeMode: false
-    })
+    document.body.oncopy = function () {
+        swal("复制成功 🎉",
+            "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 Github 给个 star 吧 😊",
+            "success"); };
 </script>
+<!-- 置顶插件 -->
+<script src="static/jquery-1.11.3.min.js"></script>
+<script src="static/jquery.toTop.min.js"></script>
+<script>
+    $('.to-top').toTop();
+</script>
+
+<!-- toc插件 -->
+<!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+<script>
+    window.$docsify = {
+        toc: {
+            scope: '.markdown-section',
+            headings: 'h1, h2, h3, h4, h5, h6',
+            title: 'Table of Contents',
+        },
+    }
+</script>-->
+
+
 </body>
 </html>

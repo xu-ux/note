@@ -1,4 +1,4 @@
-# :fire:主页简介
+# 🧙‍♂️主页简介
 
 > 我的[个人云笔记本](https://xu-ux.github.io/note/)，主要记载工作中遇到的异常，业务处理，知识点总结，框架和环境搭建等等
 - 开发语言：Golang、Javascript、Java、Dart等
