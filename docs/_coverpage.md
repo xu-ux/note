@@ -2,7 +2,7 @@
 
 ![logo](_media/cover.svg)
 
-# xu-ux的个人云笔记 <small>1.0.0</small>
+# xu-ux的个人云笔记 <small>1.0.1</small>
 
 > 记载工作中遇到的异常，业务处理，知识点总结，框架和环境搭建等等
 
