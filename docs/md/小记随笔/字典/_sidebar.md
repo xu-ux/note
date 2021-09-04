@@ -1,3 +1,3 @@
-- 字典参考
+- [字典参考](/catalog/jottings.md)
     - [EmojiSheet](/md/小记随笔/字典/EmojiSheet.md "emoji-cheat-sheet")
     - [HttpContent-type对照表](/md/小记随笔/字典/HttpContent-type对照表.md)
