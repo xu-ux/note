@@ -1,2 +1,2 @@
-- 开发规范
+- [开发规范](/catalog/jottings.md)
     - [GitCommit规范参考](/md/小记随笔/规范/GitCommit规范参考.md)
