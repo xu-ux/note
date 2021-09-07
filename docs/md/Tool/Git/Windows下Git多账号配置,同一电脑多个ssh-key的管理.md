@@ -1,6 +1,6 @@
 # Windows下Git多账号配置,同一电脑多个ssh-key的管理
 
-因为工作需要连接多中仓库，github.com、git.oschina.net、gitlab、gitee
+因为工作需要连接多种仓库，github.com、git.oschina.net、gitlab、gitee
 
 **用管理员身份运行CMD或者Git Bash客户端**
 
