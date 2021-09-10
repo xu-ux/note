@@ -19,11 +19,15 @@ https://github.com/settings/developers
 
 1）Application name 可以随便填一个。
 
+如：`GitTalkDemo`
+
 2）Homepage URL 必须是博客仓库的域名（GitHub Pages 的），如果是自己的服务器搭建的博客，请使用自己的域名，配置中使用了仓库`notebook`作为评论区仓库（评论会提交到这个仓库里）。
+
+如：`https://xxx.github.io/notebook`
 
 3）Authorization callback URL 必须是可访问的博客域名（GitHub Pages的或者自己解析的域名都可以），配置中使用了github pages的 `notebook`作为回调地址。
 
-
+如：`https://xxx.github.io/notebook`
 
 #### 生成密钥
 
@@ -43,10 +47,10 @@ https://github.com/settings/developers
   const gitalk = new Gitalk({
     clientID: 'Github Application Client ID', // OAuth Apps的 clientID
     clientSecret: 'Github Application Client Secret', // OAuth Apps的 clientSecret
-    repo: 'Github repo', // 仓库名称 如：notebook
-    owner: 'Github repo owner',// Github的用户名 xxx
-    admin: ['Github repo collaborators, only these guys can initialize github issues'], // 如：['xxx'] ['Github的用户名']
-    id:  md5(location.pathname),// 页面的唯一标识。长度必须小于50
+    repo: 'Github repo', // 仓库名称，如：notebook
+    owner: 'Github repo owner',// 仓库所有者，如：xxx
+    admin: ['Github repo collaborators, only these guys can initialize github issues'], // 评论区管理者，如：['xxx','other username']
+    id:  md5(location.pathname),// 页面的唯一标识，长度必须小于50
     title: location.pathname, // GitHub issue 的标题
     distractionFreeMode: false
   })
