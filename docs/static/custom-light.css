@@ -104,7 +104,13 @@ a {
     margin-right: 10px;
     color: #3ec287;
 }
+/*md图片*/
+.markdown-section img {
+    border-radius: 10px;
+}
+
 /*代码区颜色*/
+/*代码区的圆角*/
 .markdown-section pre {
     border-radius: 10px;
 }
