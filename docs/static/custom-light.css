@@ -112,7 +112,7 @@ a {
 /*代码区颜色*/
 /*代码区的圆角*/
 .markdown-section pre {
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .markdown-section pre,
