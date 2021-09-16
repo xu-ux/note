@@ -126,7 +126,7 @@
                 let footer = [
                     '<hr/>',
                     '<p class="tip">相关内容，若有侵权，请联系删除！</p>',
-                    '<footer>',
+                    '<footer class="article-footer">',
                     // '<span><a href="https://github.com/xu-ux">Xu-ux</a> &copy;2021.</span>',
                     // '<span>Powered by <a href="https://docsify.js.org/" target="_blank">Docsify</a>.</span>',
                     // '<span>作者 <a href="https://github.com/xu-ux">xu-ux</a></span>',
@@ -196,7 +196,7 @@
     function reference() {
         let inputElement = document.createElement('input');
         inputElement.style.opacity = 0;
-        inputElement.value = `本文转载自[Xu-ux'note](https://github.com/xu-ux/note)`;
+        inputElement.value = `本文转载自[Xu-ux'note](https://xu-ux.github.io/note)`;
         document.body.appendChild(inputElement);
         inputElement.select(); // 选择对象
         document.execCommand("Copy"); // 执行浏览器复制命令
@@ -223,20 +223,6 @@
 <!-- 页脚插件 https://github.com/sujaykumarh/docsify-plugin-footer -->
 <script src="https://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css">
-<!--<script>
-    // 页脚
-    window.$docsify.customPageFooter = {
-        debug: false,                   // for debugging
-        showPoweredBy: true,            // should show powered by docsify at right
-        copyrightYear: '2020',              // show copyright year, default current year.
-        showCopyright: true,            // set to false to hide default copyright
-        copyright: `<span>Copyright © 2020 -${new Date().getFullYear()} <a href="https://github.com/xu-ux">✈️Xu-ux</a></span>`,           // set this to html string to use custom copyrihgt section
-        copyrightExtra: '',      // any exta text to show below copyright owner section
-        useLocalStorage: false,           // build and store footer in localstorage for quick access
-        copyrightOwnerName: '✈️Xu-ux',  // copyright owner name
-        copyrightOwnerLink: 'https://github.com/xu-ux', // copyright owner link if any
-    }
-</script>-->
 <!-- 不蒜子 -->
 <script src="static/busuanzi.pure.mini.js"></script>
 <!-- 谷歌统计 -->

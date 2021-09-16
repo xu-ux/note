@@ -48,6 +48,13 @@ a {
     text-decoration: none !important;
 }
 
+.article-footer {
+    border: 2px #42b983 dashed;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
 /*侧边栏*/
 /*左边距调整*/
 .sidebar ul {
