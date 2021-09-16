@@ -122,6 +122,13 @@ a {
     color: #f8c555 !important;
 }
 
+.markdown-section .token.tag {
+    color: #f8d486 !important;
+}
+.markdown-section .token.attr-name {
+    color: #9dd0ff;
+}
+
 .markdown-section pre code .token.punctuation {
     color: #ccc !important;
 }
@@ -134,4 +141,13 @@ a {
 .markdown-section .token.function,
 .markdown-section .token.number {
     color: #f08d49 !important;
+}
+
+.markdown-section .token.operator{
+    color: #f27474 !important
+}
+
+.markdown-section strong {
+    color: #4677d0 !important;
+    font-weight: 600 !important;
 }
