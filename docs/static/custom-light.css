@@ -92,3 +92,46 @@ a {
     margin-right: 10px;
     color: #3ec287;
 }
+/*代码区颜色*/
+.markdown-section pre {
+    border-radius: 10px;
+}
+
+.markdown-section pre,
+.markdown-section pre code {
+/*    color: #c0c3c1 !important;
+    font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
+    background-color: #212121 !important;*/
+    color: #ccc !important;
+    font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
+    background-color: #2d2d2d !important;
+}
+
+.markdown-section .token.atrule,
+.markdown-section .token.builtin,
+.markdown-section .token.important,
+.markdown-section .token.keyword,
+.markdown-section .token.selector {
+    color: #cc99cd !important;
+}
+
+.markdown-section .token.class-name,
+.markdown-section .token.constant,
+.markdown-section .token.property,
+.markdown-section  .token.symbol {
+    color: #f8c555 !important;
+}
+
+.markdown-section pre code .token.punctuation {
+    color: #ccc !important;
+}
+
+.markdown-section .token.comment {
+    color: #77B767 !important;
+}
+
+.markdown-section .token.boolean,
+.markdown-section .token.function,
+.markdown-section .token.number {
+    color: #f08d49 !important;
+}
