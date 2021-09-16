@@ -21,12 +21,31 @@ a {
     background-color: #42b983 !important;
     box-shadow: rgb(140 245 148 / 80%) 0px 0px 2px, rgb(0 0 0 / 5%) 0px 0px 0px 1px inset !important;
 }
+/*弹窗的设置2*/
+.swal-button {
+
+    background-color: #42b983 !important;
+}
 
 /*内容区*/
 .content {
     max-width: 1200px;
     margin: 0 auto;
     /*padding-top: 70px !important;*/
+}
+
+/*滚动条样式 start*/
+/* 滚动条宽度 */
+::-webkit-scrollbar{width:5px;}
+/* 滚动条颜色 */
+::-webkit-scrollbar-thumb{
+    background: #33a9dc;
+    background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+    border-radius: 2em;
+}
+
+#customFooter a{
+    text-decoration: none !important;
 }
 
 /*侧边栏*/

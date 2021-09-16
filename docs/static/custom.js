@@ -9,3 +9,11 @@ const gitalk = new Gitalk({
     // facebook-like distraction free mode
     distractionFreeMode: false
 })
+function getYiYan(){
+    fetch('https://v1.hitokoto.cn').then(response => response.json()).then(function(json) {
+        $("#yiyan").fadeIn(500);
+        $('#yiyan').text(`${json.hitokoto} —— ${json.from}`);
+        setTimeout(()=>{$("#yiyan").fadeOut(500)},5000)
+    })
+}
+setInterval(getYiYan,6000);

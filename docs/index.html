@@ -4,7 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <meta name="description" content="xu-ux的个人云笔记">
+    <meta name="title" content="Xu-ux的个人云笔记">
+    <meta name="keywords" content="xu-ux,java编程,后端开发,springboot,前端开发,github" />
+    <meta name="description" content="Xu-ux's note是一个关注后端开发，java编程技术的博客笔记类网站" />
+    <!-- 百度站点收录-->
+    <meta name="baidu-site-verification" content="SZyWUIzWiU" />
     <link rel="icon" href="favicon.ico">
     <!--vue主题-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">
@@ -86,6 +90,20 @@
             skin: 'classic',
         },
 
+        // 页脚
+        customPageFooter : {
+            debug: false,                   // for debugging
+            showPoweredBy: true,            // should show powered by docsify at right
+            copyrightYear: '2020',              // show copyright year, default current year.
+            showCopyright: true,            // set to false to hide default copyright
+            copyright: `<span>Copyright © 2020 -${new Date().getFullYear()} <a href="https://github.com/xu-ux">✈️Xu-ux</a>&nbsp;<span id="yiyan"></span></span>`,
+            // set this to html string to use custom copyrihgt section
+            copyrightExtra: '',      // any exta text to show below copyright owner section
+            useLocalStorage: false,           // build and store footer in localstorage for quick access
+            copyrightOwnerName: '✈️Xu-ux',  // copyright owner name
+            copyrightOwnerLink: 'https://github.com/xu-ux', // copyright owner link if any
+        },
+
         plugins: [
             function(hook, vm) {
 
@@ -94,7 +112,7 @@
                         'https://github.com/xu-ux/note/blob/main/docs/' +vm.route.file;
                     let editHtml = `[📝 EDIT DOCUMENT](` + url + `)\n`;
 
-                    let discussionsHtml = `[:thought_balloon:问答&社区](https://github.com/xu-ux/note/discussions)\n`
+                    let discussionsHtml = `[:thought_balloon:DISCUSSIONS](https://github.com/xu-ux/note/discussions)\n`
 
                     return (
                         //editHtml + discussionsHtml +
@@ -109,9 +127,11 @@
                     '<hr/>',
                     '<p class="tip">相关内容，若有侵权，请联系删除！</p>',
                     '<footer>',
-                    '<span><a href="https://github.com/xu-ux">Xu-ux</a> &copy;2021.</span>',
-                    '<span>Powered by <a href="https://docsify.js.org/" target="_blank">Docsify</a>.</span>',
-                    '<span>问答&社区 <a href="https://github.com/xu-ux/note/discussions" target="_blank">Xu-ux\'s Discussions</a></span>',
+                    // '<span><a href="https://github.com/xu-ux">Xu-ux</a> &copy;2021.</span>',
+                    // '<span>Powered by <a href="https://docsify.js.org/" target="_blank">Docsify</a>.</span>',
+                    // '<span>作者 <a href="https://github.com/xu-ux">xu-ux</a></span>',
+                    '<div>🔖本站使用「CC BY 4.0」创作共享协议，转载请在文章明显位置注明作者及出处<a style="cursor: pointer;" onclick="reference()">一键引用</a></div>',
+                    '<div>🧼问答&社区 <a href="https://github.com/xu-ux/note/discussions" target="_blank">Xu-ux\'s Discussions</a></div>',
                     '</footer>'
                 ].join('');
 
@@ -166,13 +186,27 @@
 <script type="text/javascript" src="static/custom.js"></script>
 <!--uml时序图支持 https://github.com/imyelo/docsify-plantuml -->
 <script src="https://unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
-<!-- 复制弹窗-->
-<script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+<!-- 复制弹窗 https://www.sweetalert.cn/guides.html -->
+<script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
 <script>
     document.body.oncopy = function () {
         swal("复制成功 🎉",
             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 Github 给个 star 吧 😊",
             "success"); };
+    function reference() {
+        let inputElement = document.createElement('input');
+        inputElement.style.opacity = 0;
+        inputElement.value = `本文转载自[Xu-ux'note](https://github.com/xu-ux/note)`;
+        document.body.appendChild(inputElement);
+        inputElement.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        swal({
+            title: "引用成功",
+            text: "引用信息已复制到粘贴板了！ 🎉",
+            button: false,
+            timer: 1000
+        })
+    }
 </script>
 <!-- 置顶插件 -->
 <script src="static/jquery-1.11.3.min.js"></script>
@@ -180,7 +214,38 @@
 <script>
     $('.to-top').toTop();
 </script>
-
+<!-- PWA 离线化 -->
+<script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('pwa.js')
+    }
+</script>
+<!-- 页脚插件 https://github.com/sujaykumarh/docsify-plugin-footer -->
+<script src="https://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css">
+<!--<script>
+    // 页脚
+    window.$docsify.customPageFooter = {
+        debug: false,                   // for debugging
+        showPoweredBy: true,            // should show powered by docsify at right
+        copyrightYear: '2020',              // show copyright year, default current year.
+        showCopyright: true,            // set to false to hide default copyright
+        copyright: `<span>Copyright © 2020 -${new Date().getFullYear()} <a href="https://github.com/xu-ux">✈️Xu-ux</a></span>`,           // set this to html string to use custom copyrihgt section
+        copyrightExtra: '',      // any exta text to show below copyright owner section
+        useLocalStorage: false,           // build and store footer in localstorage for quick access
+        copyrightOwnerName: '✈️Xu-ux',  // copyright owner name
+        copyrightOwnerLink: 'https://github.com/xu-ux', // copyright owner link if any
+    }
+</script>-->
+<!-- 不蒜子 -->
+<script src="static/busuanzi.pure.mini.js"></script>
+<!-- 谷歌统计 -->
+<!--<script>
+    window.$docsify = {
+        ga: 'UA-XXXXX-Y'
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>-->
 <!-- toc插件 -->
 <!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
 <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
