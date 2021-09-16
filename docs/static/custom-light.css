@@ -81,6 +81,18 @@ a {
     background-color: #3ec287;
 }
 
+/*选中颜色*/
+::selection {
+    color:#FFFFFF !important;
+    background-color: #d24747 !important;
+    text-shadow:none !important;
+}
+::-moz-selection {
+    color:#FFFFFF !important;
+    background-color: #d24747 !important;
+    text-shadow:none !important;
+}
+
 /*md渲染*/
 .markdown-section blockquote {
     border-left: 5px solid var(--theme-color, #42b983) !important;
