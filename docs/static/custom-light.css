@@ -15,6 +15,21 @@ a {
 }
 /*封面背景end*/
 
+/*定义鼠标指针*/
+* {
+    cursor:url('https://cdn.jsdelivr.net/gh/xu-ux/common@latest/cursors/SimplifyMintCoffee/x32/01_normal_select.cur'),auto;
+}
+input, p, pre span, textarea {
+    cursor: url('https://cdn.jsdelivr.net/gh/xu-ux/common@latest/cursors/SimplifyMintCoffee/x32/06_text_select.cur'),text !important;
+}
+a , a span ,.to-top , button , button span {
+    cursor:url("https://cdn.jsdelivr.net/gh/xu-ux/common@latest/cursors/SimplifyMintCoffee/x32/15_link_select.cur") ,pointer !important;
+}
+
+.disabled , input:disabled , button:disabled{
+    cursor:url("https://cdn.jsdelivr.net/gh/xu-ux/common@latest/cursors/SimplifyMintCoffee/x32/08_unavailable32.cur") ,pointer !important;
+}
+
 /*弹窗的设置*/
 .sweet-alert .sa-button-container .sa-confirm-button-container button{
     display: inline-block !important;
@@ -41,6 +56,14 @@ a {
 ::-webkit-scrollbar-thumb{
     background: #33a9dc;
     background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+    border-radius: 2em;
+}
+/*https://www.cnblogs.com/amylis_chen/p/11995324.html*/
+::-webkit-scrollbar:horizontal{
+    height: 8px;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #a9a9a9;
     border-radius: 2em;
 }
 
@@ -94,6 +117,9 @@ a {
 }
 
 /*md渲染*/
+.markdown-section {
+    font-size: 1rem !important;
+}
 .markdown-section blockquote {
     border-left: 5px solid var(--theme-color, #42b983) !important;
     background-color: #f2f9f2;
@@ -168,4 +194,5 @@ a {
 .markdown-section strong {
     color: #4677d0 !important;
     font-weight: 600 !important;
+    border-bottom: 2px #8aadea dotted;
 }
