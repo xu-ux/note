@@ -28,6 +28,6 @@
 
 <br>
 
-[Gitee](https://gitee.com/xuo-oux)
+[Gitee](https://gitee.com/xucux)
 [GitHub](https://github.com/xu-ux)
 [开始阅读](#🧙♂%ef%b8%8f主页简介)
