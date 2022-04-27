@@ -75,6 +75,13 @@
             color: 'rgb(90,90,90)',
             language: 'chinese'
         },
+        // 分章节
+        pagination: {
+            previousText: '上一章节',
+            nextText: '下一章节',
+            crossChapter: true,
+            crossChapterText: true,
+        },
         // 分栏
         tabs: {
             persist    : true,      // default
@@ -190,9 +197,11 @@
 <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 <!--docsify-katex-->
 <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+<!-- 下一章节 -->
+<script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <!--代码语法高亮支持-->
-<!--https://cdnjs.com/libraries/prism-->
-<!--https://www.jsdelivr.com/package/npm/prismjs-->
+<!--https://cdnjs.com/libraries/prism -->
+<!--https://www.jsdelivr.com/package/npm/prismjs -->
 <!--<script th:src="@{/js/prism.js}></script>-->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-php.min.js"></script>
